@@ -1,0 +1,25 @@
+{
+  "name": "heated-electrons",
+  "version": "1.0.0",
+  "description": "Hot reloading with Electron, React & Redux.",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swashcap/heated-electrons.git"
+  },
+  "keywords": [
+    "electron",
+    "react",
+    "redux"
+  ],
+  "author": "Cory Reed <swashcap@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/swashcap/heated-electrons/issues"
+  },
+  "homepage": "https://github.com/swashcap/heated-electrons#readme",
+  "private": true
+}
