@@ -2,8 +2,9 @@
   "name": "heated-electrons",
   "version": "1.0.0",
   "description": "Hot reloading with Electron, React & Redux.",
-  "main": "app/index.js",
+  "main": "app/main.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
