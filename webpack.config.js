@@ -4,20 +4,21 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+  context: path.resolve(__dirname, './app/render/'),
   devServer: {
     clientLogLevel: 'error',
-    contentBase: path.join(__dirname, '.tmp'),
+    contentBase: 'http://localhost:8080', // path.join(__dirname, '.tmp'),
     historyApiFallback: true,
     hot: true,
     noInfo: true,
-    publicPath: '/',
+    publicPath: 'http://localhost:8080/',
   },
   devtool: 'eval',
   entry: [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    path.resolve(__dirname, './app/render/index.js'),
+    './index.js',
   ],
   module: {
     rules: [{
@@ -33,7 +34,8 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, '.tmp'),
-    publicPath: '/',
+    pathinfo: true,
+    publicPath: 'http://localhost:8080/',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
