@@ -1,0 +1,54 @@
+/**
+ * Global styles for heated-electron.
+ */
+
+html {
+  background: DARKSLATEGRAY;
+  color: LEMONCHIFFON;
+  font-family: sans-serif;
+}
+a {
+  color: ALICEBLUE;
+}
+body {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 48em;
+}
+
+/** Header */
+header[role=banner] {
+  border-bottom: thin dashed honeydew;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+header[role=banner] nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+header[role=banner] nav a {
+  display: inline-block;
+  padding: .5rem 1rem;
+  text-decoration: none;
+}
+header[role=banner] nav a:focus,
+header[role=banner] nav a:hover {
+  background: MEDIUMSLATEBLUE;
+}
+header[role=banner] nav a:active {
+  background-color: DODGERBLUE;
+}
+
+/** Footer */
+footer[role=contentinfo] {
+  border-top: thin dashed honeydew;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}

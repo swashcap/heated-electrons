@@ -4,10 +4,10 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  context: path.resolve(__dirname, './app/render/'),
+  context: path.resolve(__dirname, './app/'),
   devServer: {
     clientLogLevel: 'error',
-    contentBase: 'http://localhost:8080', // path.join(__dirname, '.tmp'),
+    contentBase: path.resolve(__dirname, './app/'),
     historyApiFallback: true,
     hot: true,
     noInfo: true,
@@ -18,7 +18,7 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    './index.js',
+    './render/index.js',
   ],
   module: {
     rules: [{
@@ -29,6 +29,14 @@ module.exports = {
         presets: ['env'],
       },
       test: /\.(js|jsx)$/,
+    }, {
+      rules: [{
+        loaders: [
+          'style-loader',
+          'css-loader',
+        ],
+        test: /\.css$/,
+      }],
     }],
   },
   output: {
@@ -44,6 +52,6 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json', '.jsx'],
   },
-  target: 'electron-renderer',
+  // target: 'electron-renderer',
 };
 
